@@ -2,7 +2,7 @@ import Button from '../components/Button';
 import Header from '../components/Header';
 import Image from 'next/image';
 import Layout from '../components/Layout';
-import Swatch from '../components/Swatch';
+import CarColorPicker from '../components/CarColorPicker';
 
 import { getAllVehicles, getAllColors } from '../lib/api';
 
@@ -25,16 +25,7 @@ const Homepage = ({data, colors}) => {
   //console.log({data});
   return <Layout>
     <h1>Homepage</h1>
-    <h2>color picker</h2>
-    <div>
-      Large image goes here
-    </div>
-    <ul>
-      {colors.map((color) => {
-        return <Swatch color={color} />
-      })}
-    </ul>
-    <h3>color name</h3>
+    <CarColorPicker colors={colors} />
   </Layout>
 }
 

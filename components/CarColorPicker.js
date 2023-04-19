@@ -8,7 +8,7 @@ const CarColorPicker = ({ colors }) => {
 
     return <div>
         <Heading level={2}>
-        color picker
+            color picker
         </Heading>
         <div>
             <Image 

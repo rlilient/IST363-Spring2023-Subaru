@@ -47,6 +47,6 @@ export async function getStaticPaths() {
           height={featuredImage.node.mediaDetails.height}
           />
         }
-        < TrimPicker trimLevels = {trimLevels} />
+        <TrimPicker trimLevels = {trimLevels} />
     </div>
   }

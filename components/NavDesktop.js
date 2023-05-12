@@ -1,17 +1,11 @@
-import ButtonUI from './ButtonUI';
-import styles from './navoverlay.module.scss';
-import Link from 'next/link';
 import { getPages } from '../lib/api';
+import Link from 'next/link';
+import styles from './navdesktop.module.scss';
 
-const NavOverlay = ({ closeHandler }) => {
+const NavDesktop = () => {
     const pages = getPages();
-    return <div className={styles.navoverlay}>
-        <ButtonUI
-            icon="close"
-            clickHandler={closeHandler}
-        />
-    <nav className={styles.navmobile}>
-        <ul className={styles.navmobile_list}>
+    return <nav className={styles.navdesktop}>
+        <ul className={styles.navdesktop_list}>
             {pages.map((page, index) => {
                 const {title,slug} = page;
                 return <li key={`navDesktop${index}`}>
@@ -23,6 +17,5 @@ const NavOverlay = ({ closeHandler }) => {
             })}
         </ul>
     </nav>
-</div>
 }
-export default NavOverlay
+export default NavDesktop;
